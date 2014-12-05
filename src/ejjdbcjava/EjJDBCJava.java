@@ -3,8 +3,8 @@ package ejjdbcjava;
 import java.util.ArrayList;
 
 /**
- * 
- * @author fer
+ * 5 de Diciembre de 2014
+ * @author https://github.com/arkadoel
  */
 public class EjJDBCJava {
 

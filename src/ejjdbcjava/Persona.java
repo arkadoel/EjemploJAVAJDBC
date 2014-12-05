@@ -1,10 +1,10 @@
 package ejjdbcjava;
 
 /**
- *
+ * JavaBean o Clase-objeto para la tabla Persona
  * @author https://github.com/arkadoel
  */
-public class Persona {
+public class Persona implements java.io.Serializable {
     private String id;
     private String Nombre;
     private String Apellidos;

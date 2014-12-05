@@ -1,16 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ejjdbcjava;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
 /**
- *
+ * Maneja las acciones sobre la tabla Persona
  * @author https://github.com/arkadoel
  */
 public class tbPersonas {
@@ -30,20 +24,35 @@ public class tbPersonas {
     
     private static String SELECT = "select * from persona;";
     
-    public static int Add(Persona _conf)
+    /**
+     * Agregar una persona a la base de datos
+     * @param _conf
+     * @return 
+     */
+    public static Integer Add(Persona _conf)
     {
         String sql = mapeoSQL(INSERT, _conf);
         int resultado = GestorDB.Ejecutar(sql);
         return resultado;
     }
 
-    public static int Delete(Persona _conf)
+    /**
+     * Eliminar una persona de la base de datos
+     * @param _conf
+     * @return 
+     */
+    public static Integer Delete(Persona _conf)
     {
         String sql = mapeoSQL(DELETE, _conf);
         int resultado = GestorDB.Ejecutar(sql);
         return resultado;
     }
 
+    /**
+     * Actualiza los datos de una persona
+     * @param _conf
+     * @return 
+     */
     public static int Update(Persona _conf)
     {
         String sql = mapeoSQL(UPDATE, _conf);
@@ -51,6 +60,12 @@ public class tbPersonas {
         return resultado;
     }
 
+    /**
+     * Mapea los datos de una persona a la consulta SQL correspondiente
+     * @param _sql
+     * @param _conf
+     * @return 
+     */
     private static String mapeoSQL(String _sql, Persona _conf)
     {
         String s = _sql;
@@ -65,8 +80,10 @@ public class tbPersonas {
         return s;
     }
     
-    
-    
+    /**
+     * Obtiene la lista completa de personas de la DB
+     * @return 
+     */
     public static ArrayList<Persona> toArrayList(){
         ArrayList<Persona> lista = new ArrayList<>();
         ResultSet rs = GestorDB.Consulta(SELECT);
@@ -94,6 +111,7 @@ public class tbPersonas {
         return lista;               
     }
 	
+    
     public static Persona getPersonaByName(String nombre){
         String sql = SELECT.replace(";", " where Nombre='" + nombre + "'");
         ResultSet rs = GestorDB.Consulta(sql);

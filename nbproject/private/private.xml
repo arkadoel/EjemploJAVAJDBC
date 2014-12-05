@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/media/DATOS/PROYECTOS/2014/ejJDBCJava/src/ejjdbcjava/EjJDBCJava.java</file>
-            <file>file:/media/DATOS/PROYECTOS/2014/ejJDBCJava/src/ejjdbcjava/GestorDB.java</file>
-            <file>file:/media/DATOS/PROYECTOS/2014/ejJDBCJava/src/ejjdbcjava/tbPersonas.java</file>
-            <file>file:/media/DATOS/PROYECTOS/2014/ejJDBCJava/src/ejjdbcjava/Persona.java</file>
+            <file>file:/media/DATOS/PROYECTOS/2014/EjemploJAVAJDBC/src/ejjdbcjava/EjJDBCJava.java</file>
+            <file>file:/media/DATOS/PROYECTOS/2014/EjemploJAVAJDBC/src/ejjdbcjava/Persona.java</file>
+            <file>file:/media/DATOS/PROYECTOS/2014/EjemploJAVAJDBC/src/ejjdbcjava/tbPersonas.java</file>
+            <file>file:/media/DATOS/PROYECTOS/2014/EjemploJAVAJDBC/src/ejjdbcjava/GestorDB.java</file>
         </group>
     </open-files>
 </project-private>

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * 
+ * Clase que gestiona las operaciones con la base de datos
  * @author https://github.com/arkadoel
  */
 public class GestorDB {
@@ -17,6 +17,10 @@ public class GestorDB {
     public static String LoginName="";
     public static String Password="";
     
+    /**
+     * Obtiene la conexion a la base de datos
+     * @return Connection
+     */
     public static Connection getConnection(){
         
         if(_conn!=null){
@@ -33,6 +37,10 @@ public class GestorDB {
         return _conn;
     }
     
+    /**
+     * Cierra la conexion con la base de datos si esta abierta
+     * y hace un commit si procede.
+     */
     public static void finalizarConexion(){
         if(_conn !=null){
             try {
@@ -47,6 +55,11 @@ public class GestorDB {
         }
     }
     
+    /**
+     * Devuelve un Resultset con el resultado de la consulta
+     * @param _sql = Consulsta SQL
+     * @return ResultSet
+     */
     public static ResultSet Consulta(String _sql){
         Connection con = GestorDB.getConnection();
         ResultSet rs= null;
@@ -62,7 +75,12 @@ public class GestorDB {
         return rs;
     }
     
-    public static int Ejecutar(String _sql){
+    /**
+     * Devuelve el numero de filas afectadas por la consulta.
+     * @param _sql
+     * @return Int
+     */
+    public static Integer Ejecutar(String _sql){
         int respuesta=-1;
         
         try{
